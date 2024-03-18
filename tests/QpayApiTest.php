@@ -45,7 +45,7 @@ it('creates invoice', function () use ($api) {
 
     expect($response)
         ->not()->toBeNull()
-        ->urls->toHaveCount(13)
+        ->urls->toHaveCount(17)
     ;
 
     return $response;
@@ -59,7 +59,7 @@ it('gets the invoice', function (CreateInvoiceResponse $createInvoiceResponse) u
         ->senderInvoiceNo->toBe('1234567')
         ->invoiceDescription->toBe('test')
         ->callbackUrl->toBe('https://bd5492c3ee85.ngrok.io/payments?payment_id=123')
-        ->totalAmount->toBe(100.0)
+        ->totalAmount->toBe('100.00')
         ->grossAmount->toBe(100.0)
         ->invoiceStatus->toBe('OPEN')
     ;

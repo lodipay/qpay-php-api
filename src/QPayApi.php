@@ -42,7 +42,7 @@ class QPayApi extends TseGuzzle
      */
     public function getAuthToken(): AuthTokenDTO
     {
-        $response = $this->sendRequest('POST', 'auth/token', [
+        $response = $this->send('POST', 'auth/token', [
             'auth' => [$this->username, $this->password],
         ]);
 
@@ -54,7 +54,7 @@ class QPayApi extends TseGuzzle
      */
     public function refreshAuthToken(string $refreshToken): AuthTokenDTO
     {
-        $response = $this->sendRequest('POST', 'auth/refresh', [
+        $response = $this->send('POST', 'auth/refresh', [
             'headers' => [
                 'Authorization' => 'Bearer '.$refreshToken,
             ],
@@ -69,7 +69,7 @@ class QPayApi extends TseGuzzle
      */
     public function createInvoice(CreateInvoiceRequest $request): CreateInvoiceResponse
     {
-        $response = $this->sendRequest('POST', 'invoice', [
+        $response = $this->send('POST', 'invoice', [
             'oauth2' => true,
             'json' => $request->toArray(),
         ]);
@@ -82,7 +82,7 @@ class QPayApi extends TseGuzzle
      */
     public function getInvoice(string $invoiceId): GetInvoiceResponse
     {
-        $response = $this->sendRequest('GET', 'invoice/'.$invoiceId, [
+        $response = $this->send('GET', 'invoice/'.$invoiceId, [
             'oauth2' => true,
         ]);
 
@@ -94,7 +94,7 @@ class QPayApi extends TseGuzzle
      */
     public function cancelInvoice(string $invoiceId): void
     {
-        $this->sendRequest('DELETE', 'invoice/'.$invoiceId, [
+        $this->send('DELETE', 'invoice/'.$invoiceId, [
             'oauth2' => true,
         ]);
     }
@@ -105,7 +105,7 @@ class QPayApi extends TseGuzzle
      */
     public function checkPayment(CheckPaymentRequest $request): CheckPaymentResponse
     {
-        $response = $this->sendRequest('POST', 'payment/check', [
+        $response = $this->send('POST', 'payment/check', [
             'oauth2' => true,
             'json' => $request->toArray(),
         ]);
@@ -120,7 +120,7 @@ class QPayApi extends TseGuzzle
      */
     public function getPayment(string $paymentId): Payment
     {
-        $response = $this->sendRequest('GET', 'payment/'.$paymentId, [
+        $response = $this->send('GET', 'payment/'.$paymentId, [
             'oauth2' => true,
         ]);
 
@@ -133,7 +133,7 @@ class QPayApi extends TseGuzzle
      */
     public function cancelPayment(string $paymentId, string $note): void
     {
-        $this->sendRequest('DELETE', 'payment/cancel/'.$paymentId, [
+        $this->send('DELETE', 'payment/cancel/'.$paymentId, [
             'oauth2' => true,
             'json' => [
                 'callback_url' => 'https://qpay.mn/payment/result?payment_id='.$paymentId,
@@ -148,7 +148,7 @@ class QPayApi extends TseGuzzle
      */
     public function refundPayment(string $paymentId, string $note): void
     {
-        $this->sendRequest('DELETE', 'payment/refund/'.$paymentId, [
+        $this->send('DELETE', 'payment/refund/'.$paymentId, [
             'oauth2' => true,
             'json' => [
                 'callback_url' => 'https://qpay.mn/payment/result?payment_id='.$paymentId,
@@ -194,7 +194,7 @@ class QPayApi extends TseGuzzle
     /**
      * @param array<string, mixed> $options
      */
-    private function sendRequest(string $method, string $path, array $options = []): ResponseInterface
+    public function send(string $method, string $path, array $options = []): ResponseInterface
     {
         $response = $this->client->request($method, $path, $options);
 
