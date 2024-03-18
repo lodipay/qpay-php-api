@@ -17,8 +17,8 @@
   "require": {
     "php": "^8.1",
     "nesbot/carbon": "^2.62",
-    "lodipay/tse-guzzle": "^1.0",
-    "lodipay/php-dto": "^1.0"
+    "lodipay/tse-guzzle": "^1.1",
+    "lodipay/php-dto": "*"
   },
   "require-dev": {
     "phpstan/phpstan": "^1.8",
