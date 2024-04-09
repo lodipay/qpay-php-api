@@ -1,10 +1,10 @@
 <?php
 
-namespace Tsetsee\Qpay\Api\DTO;
+namespace Lodipay\Qpay\Api\DTO;
 
-use Tsetsee\DTO\Attributes\MapTo;
-use Tsetsee\DTO\DTO\TseDTO;
-use Tsetsee\Qpay\Api\Enum\ObjectType;
+use Lodipay\DTO\Attributes\MapTo;
+use Lodipay\DTO\DTO\TseDTO;
+use Lodipay\Qpay\Api\Enum\ObjectType;
 
 class CheckPaymentRequest extends TseDTO
 {

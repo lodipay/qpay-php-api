@@ -1,8 +1,8 @@
 <?php
 
-namespace Tsetsee\Qpay\Api\Exception;
+namespace Lodipay\Qpay\Api\Exception;
 
-use Tsetsee\Qpay\Api\DTO\ErrorDTO;
+use Lodipay\Qpay\Api\DTO\ErrorDTO;
 
 class BadResponseException extends \Exception
 {

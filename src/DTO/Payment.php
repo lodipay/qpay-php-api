@@ -1,15 +1,15 @@
 <?php
 
-namespace Tsetsee\Qpay\Api\DTO;
+namespace Lodipay\Qpay\Api\DTO;
 
 use Carbon\CarbonImmutable;
-use Tsetsee\DTO\Attributes\MapFrom;
-use Tsetsee\DTO\DTO\TseDTO;
-use Tsetsee\Qpay\Api\Enum\Currency;
-use Tsetsee\Qpay\Api\Enum\ObjectType;
-use Tsetsee\Qpay\Api\Enum\PaymentStatus;
-use Tsetsee\Qpay\Api\Enum\PaymentType;
-use Tsetsee\Qpay\Api\Enum\TransactionType;
+use Lodipay\DTO\Attributes\MapFrom;
+use Lodipay\DTO\DTO\TseDTO;
+use Lodipay\Qpay\Api\Enum\Currency;
+use Lodipay\Qpay\Api\Enum\ObjectType;
+use Lodipay\Qpay\Api\Enum\PaymentStatus;
+use Lodipay\Qpay\Api\Enum\PaymentType;
+use Lodipay\Qpay\Api\Enum\TransactionType;
 
 class Payment extends TseDTO
 {

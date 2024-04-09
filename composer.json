@@ -4,12 +4,12 @@
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "Tsetsee\\Qpay\\Api\\": "src/"
+      "Lodipay\\Qpay\\Api\\": "src/"
     }
   },
   "authors": [
     {
-      "name": "Tsetsee",
+      "name": "Tsetsentsengel Munkhbayar",
       "email": "tsetsee.yugi@gmail.com"
     }
   ],

@@ -1,21 +1,21 @@
 <?php
 
-namespace Tsetsee\Qpay\Api;
+namespace Lodipay\Qpay\Api;
 
 use Carbon\Carbon;
+use Lodipay\Qpay\Api\DTO\AuthTokenDTO;
+use Lodipay\Qpay\Api\DTO\CheckPaymentRequest;
+use Lodipay\Qpay\Api\DTO\CheckPaymentResponse;
+use Lodipay\Qpay\Api\DTO\CreateInvoiceRequest;
+use Lodipay\Qpay\Api\DTO\CreateInvoiceResponse;
+use Lodipay\Qpay\Api\DTO\ErrorDTO;
+use Lodipay\Qpay\Api\DTO\GetInvoiceResponse;
+use Lodipay\Qpay\Api\DTO\Payment;
+use Lodipay\Qpay\Api\Enum\BaseUrl;
+use Lodipay\Qpay\Api\Enum\Env;
+use Lodipay\Qpay\Api\Exception\BadResponseException;
+use Lodipay\TseGuzzle\TseGuzzle;
 use Psr\Http\Message\ResponseInterface;
-use Tsetsee\Qpay\Api\DTO\AuthTokenDTO;
-use Tsetsee\Qpay\Api\DTO\CheckPaymentRequest;
-use Tsetsee\Qpay\Api\DTO\CheckPaymentResponse;
-use Tsetsee\Qpay\Api\DTO\CreateInvoiceRequest;
-use Tsetsee\Qpay\Api\DTO\CreateInvoiceResponse;
-use Tsetsee\Qpay\Api\DTO\ErrorDTO;
-use Tsetsee\Qpay\Api\DTO\GetInvoiceResponse;
-use Tsetsee\Qpay\Api\DTO\Payment;
-use Tsetsee\Qpay\Api\Enum\BaseUrl;
-use Tsetsee\Qpay\Api\Enum\Env;
-use Tsetsee\Qpay\Api\Exception\BadResponseException;
-use Tsetsee\TseGuzzle\TseGuzzle;
 
 class QPayApi extends TseGuzzle
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Tsetsee\Qpay\Api\Enum;
+namespace Lodipay\Qpay\Api\Enum;
 
 enum AuthTokenType: string
 {

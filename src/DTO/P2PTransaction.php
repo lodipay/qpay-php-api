@@ -1,11 +1,11 @@
 <?php
 
-namespace Tsetsee\Qpay\Api\DTO;
+namespace Lodipay\Qpay\Api\DTO;
 
-use Tsetsee\DTO\Attributes\MapFrom;
-use Tsetsee\DTO\DTO\TseDTO;
-use Tsetsee\Qpay\Api\Enum\BankCode;
-use Tsetsee\Qpay\Api\Enum\Currency;
+use Lodipay\DTO\Attributes\MapFrom;
+use Lodipay\DTO\DTO\TseDTO;
+use Lodipay\Qpay\Api\Enum\BankCode;
+use Lodipay\Qpay\Api\Enum\Currency;
 
 class P2PTransaction extends TseDTO
 {

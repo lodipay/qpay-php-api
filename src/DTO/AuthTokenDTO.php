@@ -1,13 +1,13 @@
 <?php
 
-namespace Tsetsee\Qpay\Api\DTO;
+namespace Lodipay\Qpay\Api\DTO;
 
 use Carbon\Carbon;
+use Lodipay\DTO\Attributes\MapFrom;
+use Lodipay\DTO\DTO\TseDTO;
+use Lodipay\DTO\Serializer\Normalizer\CarbonNormalizer;
+use Lodipay\Qpay\Api\Enum\AuthTokenType;
 use Symfony\Component\Serializer\Annotation\Context;
-use Tsetsee\DTO\Attributes\MapFrom;
-use Tsetsee\DTO\DTO\TseDTO;
-use Tsetsee\DTO\Serializer\Normalizer\CarbonNormalizer;
-use Tsetsee\Qpay\Api\Enum\AuthTokenType;
 
 class AuthTokenDTO extends TseDTO
 {

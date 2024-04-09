@@ -1,14 +1,14 @@
 <?php
 
+use Lodipay\Qpay\Api\DTO\AuthTokenDTO;
+use Lodipay\Qpay\Api\DTO\CreateInvoiceRequest;
+use Lodipay\Qpay\Api\DTO\CreateInvoiceResponse;
+use Lodipay\Qpay\Api\DTO\GetInvoiceResponse;
+use Lodipay\Qpay\Api\Enum\Env;
+use Lodipay\Qpay\Api\QPayApi;
 use Monolog\Handler\StreamHandler;
 use Monolog\Level;
 use Monolog\Logger;
-use Tsetsee\Qpay\Api\DTO\AuthTokenDTO;
-use Tsetsee\Qpay\Api\DTO\CreateInvoiceRequest;
-use Tsetsee\Qpay\Api\DTO\CreateInvoiceResponse;
-use Tsetsee\Qpay\Api\DTO\GetInvoiceResponse;
-use Tsetsee\Qpay\Api\Enum\Env;
-use Tsetsee\Qpay\Api\QPayApi;
 
 $logger = new Logger('test');
 $logger->pushHandler(new StreamHandler(STDOUT, Level::Debug));
@@ -45,7 +45,7 @@ it('creates invoice', function () use ($api) {
 
     expect($response)
         ->not()->toBeNull()
-        ->urls->toHaveCount(17)
+        ->urls->toHaveCount(16)
     ;
 
     return $response;

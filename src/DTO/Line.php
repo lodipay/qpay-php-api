@@ -1,9 +1,9 @@
 <?php
 
-namespace Tsetsee\Qpay\Api\DTO;
+namespace Lodipay\Qpay\Api\DTO;
 
-use Tsetsee\DTO\Attributes\MapTo;
-use Tsetsee\DTO\DTO\TseDTO;
+use Lodipay\DTO\Attributes\MapTo;
+use Lodipay\DTO\DTO\TseDTO;
 
 class Line extends TseDTO
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace Tsetsee\Qpay\Api\DTO;
+namespace Lodipay\Qpay\Api\DTO;
 
 use Carbon\CarbonImmutable;
-use Tsetsee\DTO\Attributes\MapFrom;
-use Tsetsee\DTO\DTO\TseDTO;
-use Tsetsee\Qpay\Api\Enum\Currency;
+use Lodipay\DTO\Attributes\MapFrom;
+use Lodipay\DTO\DTO\TseDTO;
+use Lodipay\Qpay\Api\Enum\Currency;
 
 class CardTransaction extends TseDTO
 {

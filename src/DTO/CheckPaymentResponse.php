@@ -1,9 +1,9 @@
 <?php
 
-namespace Tsetsee\Qpay\Api\DTO;
+namespace Lodipay\Qpay\Api\DTO;
 
-use Tsetsee\DTO\Attributes\MapFrom;
-use Tsetsee\DTO\DTO\TseDTO;
+use Lodipay\DTO\Attributes\MapFrom;
+use Lodipay\DTO\DTO\TseDTO;
 
 class CheckPaymentResponse extends TseDTO
 {
